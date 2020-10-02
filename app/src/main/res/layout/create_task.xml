@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateTask"
+    android:padding="20dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name:"
+            android:paddingEnd="20dp"
+            android:textStyle="bold"
+            android:textSize="17sp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Task Name"
+            android:id="@+id/taskname"
+            android:backgroundTint="@color/colorPrimaryDark"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date:"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:layout_centerVertical="true"
+            android:id="@+id/dummy"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/dummy"
+            android:layout_centerVertical="true"
+            android:paddingStart="33dp"
+            android:id="@+id/date" />
+
+        <Button
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Set Date"
+            android:id="@+id/setdate"/>
+    </RelativeLayout>
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Priority:"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:paddingTop="15dp"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:id="@+id/radiogroup">
+
+        <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="High"
+        android:id="@+id/high"
+        android:buttonTint="@color/colorPrimaryDark"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medium"
+            android:id="@+id/medium"
+            android:buttonTint="@color/colorPrimaryDark"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Low"
+            android:id="@+id/low"
+            android:buttonTint="@color/colorPrimaryDark"/>
+    </RadioGroup>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cancel"
+            android:id="@+id/cancel"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="submit"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/submit"/>
+    </RelativeLayout>
+</LinearLayout>
